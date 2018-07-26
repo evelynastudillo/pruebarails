@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <h1>To-Do</h1>
+
+<div class="well">
+<% @todos.each do |todo| %>
+  <%= todo.description %>
+  <%= todo.completed %><a href="borrar" data-method="delete"><p>destruir</p></a>
+<% end %>
+</div>
+<%= link_to "Crear To Do", todos_new_path %>
+</body>
+</html>
