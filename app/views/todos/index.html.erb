@@ -11,9 +11,14 @@
 <div class="well">
 <% @todos.each do |todo| %>
   <%= todo.description %>
-  <%= todo.completed %><a href="borrar" data-method="delete"><p>destruir</p></a>
+  <%= todo.completed %>
+  <a href="borrar" data-method="delete"><p>borrar</p></a>
+  <p><%= link_to "Show"%></p>
 <% end %>
+
 </div>
-<%= link_to "Crear To Do", todos_new_path %>
+<h3><%= link_to "Crear To Do", todos_new_path %></h3>
+
+
 </body>
 </html>

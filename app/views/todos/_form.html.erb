@@ -1,0 +1,16 @@
+<%= form_with model: @todos, local: true do |f| %>
+<ul>
+
+<li>
+  <%= f.label :description, "Description" %>
+  <%= f.text_area :description %>
+</li>
+
+<li>
+  <%= f.label :completed, "Completed" %>
+  <%= f.text_field :completed %>
+
+  <%= f.submit 'submit' %>
+  </li>
+  <% end %>
+</ul>
