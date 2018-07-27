@@ -37,12 +37,10 @@ end
 #end
 
 def list
-@todos = Todo.all
-
+  @todos = Todo.all
 end
   private
   def todo_params
     params.require(:todo).permit(:description, :completed)
-
   end
 end

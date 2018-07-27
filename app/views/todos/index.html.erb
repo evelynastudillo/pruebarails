@@ -12,7 +12,8 @@
 <% @todos.each do |todo| %>
   <%= todo.description %>
   <%= todo.completed %>
-  <a href="borrar" data-method="delete"><p>borrar</p></a>
+  <br>
+  <%= link_to "Borrar", todo_path(todo), method: :delete, data: { confirm: "Estás seguro?"}  %> 
   <p><%= link_to "Show"%></p>
 <% end %>
 
