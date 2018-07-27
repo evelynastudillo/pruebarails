@@ -1,16 +1,31 @@
 <%= form_with model: @todos, local: true do |f| %>
-<ul>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
 
+
+  <body>
+<div class="jumbotron">
+
+<ul>
+<br>
 <li>
-  <%= f.label :description, "Description" %>
+    <%= f.label :description, "Description" %>
   <%= f.text_area :description %>
 </li>
 
 <li>
   <%= f.label :completed, "Completed" %>
   <%= f.text_field :completed %>
-
   <%= f.submit 'submit' %>
   </li>
   <% end %>
 </ul>
+
+</div>
+
+</body>
+</html>

@@ -33,8 +33,10 @@ def destroy
   redirect_to todos_path
 end
 
-#def complete
-#end
+def complete
+  @todo = Todo.find(params[:id])
+  @todo.completed = true
+end
 
 def list
   @todos = Todo.all

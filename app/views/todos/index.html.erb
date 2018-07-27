@@ -6,20 +6,29 @@
   </head>
 
   <body>
-    <h1>To-Do</h1>
 
-<div class="well">
+<div class="jumbotron">
+
 <% @todos.each do |todo| %>
+<div class="well">
   <%= todo.description %>
   <%= todo.completed %>
   <br>
-  <%= link_to "Borrar", todo_path(todo), method: :delete, data: { confirm: "Estás seguro?"}  %> 
-  <p><%= link_to "Show"%></p>
+  <%= link_to "Show", show_path(todo), method: :show,  class: "btn btn-primary" %>
+  <%= link_to "Edit", todo_path(todo), method: :edit, class: "btn btn-info" %>
+  <%= link_to "Delete", todo_path(todo), method: :delete, data: { confirm: "Estás seguro?"}, class: "btn btn-danger" %>
+
+  <div class="checkbox disabled">
+  <label><input type="checkbox" value="" disabled>Mark Completed</label>
+</div>
+
+  </div>
 <% end %>
 
-</div>
-<h3><%= link_to "Crear To Do", todos_new_path %></h3>
 
+<h3><%= link_to "Crear To Do", todos_new_path,  class: "btn btn-default" %></h3>
+
+</div>
 
 </body>
 </html>
