@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'todos', to: 'todos#index'
-  get 'todos/new'
+  get 'todos/new', as: 'new'
   post 'todos', to: 'todos#create'
   post 'todos/:id', to: 'todos#show', as: 'show'
   get 'todos/:id/edit', to: 'todos#edit'
