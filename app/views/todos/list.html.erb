@@ -1,4 +1,34 @@
-<!DOCTYPE html>
+<div class="jumbotron">
+  <div class="col-md-6">
+    <h1>To-Dos no Completados</h1>
+    <% @todos.each do |todo| %>
+    <% if todo.completed == false %>
+    <div class="col-sm-12">
+    <p> <%= todo.description.capitalize! %> </p>
+  </div>
+    <% end %>
+    <% end %>
+    </div>
+
+
+    <div class="col-md-6">
+      <h1>To-Dos Completados</h1>
+      <% @todos.each do |todo| %>
+      <% if todo.completed == true %>
+      <div class="col-sm-12">
+        <p> <%= todo.description.capitalize! %> </p>
+        </div>
+      <% end %>
+      <% end %>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -9,7 +39,7 @@
 <div class="row">
    <div class="col-sm-6 col-md-6">
     <% @todos.each do |todo| %>
-      <div class="well">
+    <div class="well">
       <%= todo.description %>
       <%= todo.completed %>
       </div>
@@ -19,4 +49,8 @@
     </div>
 
 </body>
-</html>
+</html> -->
+
+
+
+</div>
