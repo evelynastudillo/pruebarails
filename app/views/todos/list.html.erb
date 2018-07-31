@@ -1,6 +1,9 @@
+<!-- Creía que había grabado bien list view, pero al revisar me dí cuenta que no, así es como debiese quedar.
+Pido disculpas, abajo está el que había sido grabado a las 22hrs del jueves -->
+
 <div class="jumbotron">
   <div class="col-md-6">
-    <h1>To-Dos no Completados</h1>
+    <h3>To-Dos no Completados</h3>
     <% @todos.each do |todo| %>
     <% if todo.completed == false %>
     <div class="col-sm-12">
@@ -12,7 +15,7 @@
 
 
     <div class="col-md-6">
-      <h1>To-Dos Completados</h1>
+      <h3>To-Dos Completados</h3>
       <% @todos.each do |todo| %>
       <% if todo.completed == true %>
       <div class="col-sm-12">
@@ -23,10 +26,6 @@
 
     </div>
 </div>
-
-
-
-
 
 <!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
